@@ -178,7 +178,7 @@
     <div id="default-modal" tabindex="-1" aria-hidden="true"
         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
-            <div class="px-5 pt-10 pb-6">
+            <div class="px-5">
                 <div class="flex items-center gap-3 mb-2">
                     <div
                         class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
@@ -242,10 +242,10 @@
                 <div class="pt-6 flex justify-end gap-4">
                     <button
                         data-modal-hide="default-modal"
-                        class="px-6 py-2.5 rounded-lg font-bold text-on-surface-variant hover:bg-surface-container-high transition-colors"
+                        class="px-6 py-2.5 rounded-lg font-bold text-on-surface-variant hover:bg-surface-container transition-colors"
                         type="button">Cancelar</button>
                     <button
-                        class="bg-primary text-on-primary px-8 py-2.5 rounded-lg font-bold hover:bg-primary-container transition-all shadow-lg shadow-primary/20"
+                        class="bg-primary text-white px-8 py-2.5 rounded-lg font-bold hover:bg-primary-container transition-all shadow-lg shadow-primary/20"
                         type="submit">Salvar Obra</button>
                 </div>
             </form>

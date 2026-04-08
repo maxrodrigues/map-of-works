@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
 @import 'tailwindcss';
 @import "flowbite/src/themes/default";
 @plugin "flowbite/plugin";
@@ -13,8 +14,14 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
 
     --font-display: 'Manrope', sans-serif;
+    --font-inter: 'Inter', sans-serif;
 
     --color-primary: #00426d;
+    --color-surface: #F8F9FA;
+    --color-on-surface: #191C1D;
+    --color-on-surface-variant: #414750;
+    --color-outline: #717881;
+    --color-outline-variant: #c1c7d1;
 }
 
 

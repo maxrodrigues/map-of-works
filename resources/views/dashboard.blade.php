@@ -41,18 +41,6 @@
             <div class="lg:col-span-12 bg-white rounded-xl overflow-hidden shadow-sm">
                 <div class="px-8 py-6 flex justify-between items-center bg-surface-container">
                     <h3 class="text-xl font-bold text-on-surface">Recent Projects Registry</h3>
-                    <div class="flex gap-4">
-                        <button
-                            class="flex items-center gap-2 text-sm font-bold text-on-surface-variant bg-white px-4 py-2 rounded-lg border border-outline-variant hover:bg-surface-container transition-colors">
-                            <span class="material-symbols-outlined text-sm">filter_alt</span>
-                            Filter
-                        </button>
-                        <button
-                            class="flex items-center gap-2 text-sm font-bold text-on-surface-variant bg-white px-4 py-2 rounded-lg border border-outline-variant hover:bg-surface-container transition-colors">
-                            <span class="material-symbols-outlined text-sm">download</span>
-                            Export
-                        </button>
-                    </div>
                 </div>
                 <table class="w-full text-left border-collapse">
                     <thead>

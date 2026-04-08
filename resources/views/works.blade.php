@@ -175,35 +175,80 @@
         </div>
     </div>
 
-    <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-        <div class="relative p-4 w-full max-w-2xl max-h-full">
-            <!-- Modal content -->
-            <div class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
-                <!-- Modal header -->
-                <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
-                    <h3 class="text-lg font-medium text-heading">
-                        Terms of Service
-                    </h3>
-                    <button type="button" class="text-body bg-transparent hover:bg-neutral-tertiary hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center" data-modal-hide="default-modal">
-                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
-                        <span class="sr-only">Close modal</span>
-                    </button>
+    <div id="default-modal" tabindex="-1" aria-hidden="true"
+        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+            <div class="px-5 pt-10 pb-6">
+                <div class="flex items-center gap-3 mb-2">
+                    <div
+                        class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+                        <span class="material-symbols-outlined"
+                            style="font-variation-settings: 'FILL' 1;">add_business</span>
+                    </div>
+                    <h2 class="font-headline text-2xl font-extrabold text-on-surface tracking-tight">
+                        Cadastrar Nova Obra</h2>
                 </div>
-                <!-- Modal body -->
-                <div class="space-y-4 md:space-y-6 py-4 md:py-6">
-                    <p class="leading-relaxed text-body">
-                        With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
-                    </p>
-                    <p class="leading-relaxed text-body">
-                        The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
-                    </p>
-                </div>
-                <!-- Modal footer -->
-                <div class="flex items-center border-t border-default space-x-4 pt-4 md:pt-5">
-                    <button data-modal-hide="default-modal" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">I accept</button>
-                    <button data-modal-hide="default-modal" type="button" class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Decline</button>
-                </div>
+                <p class="text-on-surface-variant text-sm font-medium ml-13">
+                    Preencha os detalhes arquitetônicos para inicializar um novo perfil de monitoramento de obra.</p>
             </div>
+            <form class="p-8 space-y-6">
+                <div>
+                    <label class="block text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-2">
+                        Título do Projeto
+                    </label>
+                    <input
+                        class="w-full bg-transparent border-0 border-b-2 border-surface-variant focus:border-primary focus:ring-0 text-on-surface font-medium py-2 transition-all"
+                        placeholder="Ex: Construção de Viaduto Central" type="text" />
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div>
+                        <label
+                            class="block text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-2">Município</label>
+                        <select
+                            class="w-full bg-transparent border-0 border-b-2 border-surface-variant focus:border-primary focus:ring-0 text-on-surface font-medium py-2">
+                            <option value="">Selecione...</option>
+                            <option>São Paulo</option>
+                            <option>Rio de Janeiro</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label
+                            class="block text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-2">Status
+                            Inicial</label>
+                        <select
+                            class="w-full bg-transparent border-0 border-b-2 border-surface-variant focus:border-primary focus:ring-0 text-on-surface font-medium py-2">
+                            <option>Planejamento</option>
+                            <option>Licenciamento</option>
+                            <option>Execução</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div>
+                        <label
+                            class="block text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-2">Latitude</label>
+                        <input
+                            class="w-full bg-transparent border-0 border-b-2 border-surface-variant focus:border-primary focus:ring-0 text-on-surface font-mono py-2"
+                            placeholder="-23.5505" type="text" />
+                    </div>
+                    <div>
+                        <label
+                            class="block text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-2">Longitude</label>
+                        <input
+                            class="w-full bg-transparent border-0 border-b-2 border-surface-variant focus:border-primary focus:ring-0 text-on-surface font-mono py-2"
+                            placeholder="-46.6333" type="text" />
+                    </div>
+                </div>
+                <div class="pt-6 flex justify-end gap-4">
+                    <button
+                        data-modal-hide="default-modal"
+                        class="px-6 py-2.5 rounded-lg font-bold text-on-surface-variant hover:bg-surface-container-high transition-colors"
+                        type="button">Cancelar</button>
+                    <button
+                        class="bg-primary text-on-primary px-8 py-2.5 rounded-lg font-bold hover:bg-primary-container transition-all shadow-lg shadow-primary/20"
+                        type="submit">Salvar Obra</button>
+                </div>
+            </form>
         </div>
     </div>
 </x-layouts.app>

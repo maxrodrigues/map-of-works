@@ -7,7 +7,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 max-w-7xl">
             <!-- Municipalities Covered -->
             <div
-                class="bg-surface-container-lowest p-6 rounded-xl border-l-4 border-secondary shadow-sm flex flex-col justify-between h-40">
+                class="bg-white p-6 rounded-xl border-l-4 border-secondary shadow-sm flex flex-col justify-between h-40">
                 <div class="flex justify-between items-start">
                     <span class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Municipalities
                         Covered</span>
@@ -21,7 +21,7 @@
             </div>
             <!-- Total Active Projects -->
             <div
-                class="bg-surface-container-lowest p-6 rounded-xl border-l-4 border-primary shadow-sm flex flex-col justify-between h-40">
+                class="bg-white p-6 rounded-xl border-l-4 border-primary shadow-sm flex flex-col justify-between h-40">
                 <div class="flex justify-between items-start">
                     <span class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Total Active
                         Projects</span>
@@ -38,8 +38,8 @@
             </div>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-7xl">
-            <div class="lg:col-span-12 bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
-                <div class="px-8 py-6 flex justify-between items-center bg-surface-container-low">
+            <div class="lg:col-span-12 bg-white rounded-xl overflow-hidden shadow-sm">
+                <div class="px-8 py-6 flex justify-between items-center bg-surface-container">
                     <h3 class="text-xl font-bold text-on-surface">Recent Projects Registry</h3>
                     <div class="flex gap-4">
                         <button
@@ -56,7 +56,7 @@
                 </div>
                 <table class="w-full text-left border-collapse">
                     <thead>
-                        <tr class="bg-surface-container-low/50">
+                        <tr class="bg-surface-container/50">
                             <th class="px-8 py-4 text-xs font-bold uppercase tracking-widest text-on-surface-variant">
                                 Project ID</th>
                             <th class="px-8 py-4 text-xs font-bold uppercase tracking-widest text-on-surface-variant">

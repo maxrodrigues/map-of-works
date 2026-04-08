@@ -17,7 +17,9 @@
     --font-inter: 'Inter', sans-serif;
 
     --color-primary: #00426d;
+    --color-primary-container: #005a92;
     --color-surface: #F8F9FA;
+    --color-surface-container: #f3f4f5;
     --color-on-surface: #191C1D;
     --color-on-surface-variant: #414750;
     --color-outline: #717881;

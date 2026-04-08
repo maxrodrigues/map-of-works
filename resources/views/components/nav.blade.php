@@ -6,8 +6,6 @@
     <nav class="space-y-1">
       <x-nav.nav-item icon="dashboard" label="Dashboard" route="dashboard" />
       <x-nav.nav-item icon="upload_file" label="Upload" route="upload" />
-      {{-- <x-nav.nav-item icon="dashboard" label="Construction Dashboard" route="construction-dashboard" />
-      <x-nav.nav-item icon="analytics" label="Records" route="records" />
-      <x-nav.nav-item icon="map" label="Map" route="map" /> --}}
+      <x-nav.nav-item icon="table_chart" label="Controle de Obras" route="works" />
     </nav>
 </aside>

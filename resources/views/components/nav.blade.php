@@ -4,6 +4,7 @@
       <h2 class="text-primary font-extrabold text-lg">Project Alpha</h2>
     </div>
     <nav class="space-y-1">
+      <x-nav.nav-item icon="dashboard" label="Dashboard" route="dashboard" />
       <x-nav.nav-item icon="upload_file" label="Upload" route="upload" />
       {{-- <x-nav.nav-item icon="dashboard" label="Construction Dashboard" route="construction-dashboard" />
       <x-nav.nav-item icon="analytics" label="Records" route="records" />

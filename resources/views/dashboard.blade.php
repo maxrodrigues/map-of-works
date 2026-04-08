@@ -1,12 +1,8 @@
 <x-layouts.app>
-    <!-- Main Content Canvas -->
-    <main class="ml-64 p-10 min-h-screen bg-surface">
-        <!-- Header Section -->
-        <header class="mb-10 max-w-6xl">
-            <h1 class="text-4xl font-extrabold text-on-surface tracking-tight mb-2">Construction Monitoring</h1>
-            <p class="text-on-surface-variant text-lg">Real-time overview of active site developments and urban
-                integration.</p>
-        </header>
+    <x-header 
+        title="Monitoramento de Obras" 
+        description="Visão geral em tempo real de obras em andamento e integração urbana." 
+    />
         <!-- Key Metric Cards (Row 1) -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 max-w-7xl">
             <!-- Municipalities Covered -->
@@ -166,5 +162,4 @@
                 </div>
             </div>
         </div>
-    </main>
 </x-layouts.app>

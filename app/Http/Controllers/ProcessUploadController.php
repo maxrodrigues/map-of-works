@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProcessUploadRequest;
+use App\Models\Work;
 use Illuminate\Support\Facades\Storage;
 use Spatie\SimpleExcel\SimpleExcelReader;
 
@@ -18,7 +19,17 @@ class ProcessUploadController extends Controller
             ->useDelimiter(';')
             ->getRows()
             ->each(function (array $row) {
-                dd($row);
+                Work::create([
+                    'number' => $row['IDOBRA'],
+                    'description' => $row['OBRA'],
+                    'location' => $row['ENDERECO'],
+                    'municipality' => $row['MUNICIPIO'],
+                    'ibge_code' => $row['IBGE'],
+                    'latitude' => $row['LATITUDE'],
+                    'longitude' => $row['LONGITUDE'],
+                ]);
             });
+
+        return redirect()->route('upload')->with('success', 'Arquivo processado com sucesso');
     }
 }

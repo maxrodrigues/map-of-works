@@ -12,6 +12,12 @@
     </div>
     @endif
 
+    @if(session('success'))
+    <div class="bg-secondary/40 rounded-xl p-4 shadow-sm my-2">
+        <p class="text-xs text-secondary font-semibold">{{ session('success') }}</p>
+    </div>
+    @endif
+
     <div class="bg-white rounded-xl p-8 shadow-sm">
         <form action="{{ route('process-upload') }}" method="POST" enctype="multipart/form-data">
             @csrf

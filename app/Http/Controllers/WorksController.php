@@ -2,15 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\WorkService;
 use Illuminate\Http\Request;
 
 class WorksController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     */
+    public function __construct(protected WorkService $workService){}
+
     public function __invoke(Request $request)
     {
-        return view('works');
+        $count = $this->workService->countAllWorks();
+        $works = $this->workService->getWorks();
+
+        return view('works', compact('count', 'works'));
     }
 }

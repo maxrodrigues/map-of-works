@@ -3,13 +3,11 @@
 namespace App\Services;
 
 use App\Models\Work;
+use Illuminate\Support\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 class WorkService
 {
-    /**
-     * Create a new class instance.
-     */
     public function __construct(protected Work $model){}
 
     public function countAllWorks(): int
@@ -21,5 +19,21 @@ class WorkService
     {
         return $this->model
             ->paginate(10);
+    }
+
+    public function getMapLocations(): Collection
+    {
+        return $this->model
+            ->query()
+            ->whereNotNull('latitude')
+            ->whereNotNull('longitude')
+            ->get(['location', 'description', 'latitude', 'longitude'])
+            ->map(fn (Work $work): array => [
+                'location' => $work->location,
+                'description' => $work->description,
+                'latitude' => (float) $work->latitude,
+                'longitude' => (float) $work->longitude,
+            ])
+            ->values();
     }
 }

@@ -7,5 +7,6 @@
       <x-nav.nav-item icon="dashboard" label="Dashboard" route="dashboard" />
       <x-nav.nav-item icon="upload_file" label="Upload" route="upload" />
       <x-nav.nav-item icon="table_chart" label="Controle de Obras" route="works" />
+      <x-nav.nav-item icon="map" label="Mapa de Obras" route="works-map" />
     </nav>
 </aside>

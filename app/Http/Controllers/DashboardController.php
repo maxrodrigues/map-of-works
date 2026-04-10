@@ -4,16 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Charts\WorksMunicipality;
 use App\Models\Work;
+use App\Services\WorkService;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     */
+    public function __construct(private WorkService $workService){}
+
     public function __invoke(Request $request)
     {
-        $works = Work::selectRaw('municipality, COUNT(1) as count')->groupBy('municipality')->get();
+        $count = $this->workService->countAllWorks();
+        $works = $this->workService->getWorksMunicipality();
         
         $chart = new WorksMunicipality();
 
@@ -30,6 +31,6 @@ class DashboardController extends Controller
         
         
 
-        return view('dashboard', compact('chart'));
+        return view('dashboard', compact('count', 'chart'));
     }
 }

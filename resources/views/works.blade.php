@@ -6,18 +6,17 @@
                 <thead>
                     <tr class="bg-surface-container">
                         <th class="px-8 py-5 text-[11px] font-bold uppercase tracking-widest text-on-surface-variant">
-                            Obra / Título</th>
+                            Obra / Título
+                        </th>
                         <th class="px-8 py-5 text-[11px] font-bold uppercase tracking-widest text-on-surface-variant">
-                            Município</th>
-                        <th
-                            class="px-8 py-5 text-[11px] font-bold uppercase tracking-widest text-on-surface-variant text-center">
-                            Latitude</th>
-                        <th
-                            class="px-8 py-5 text-[11px] font-bold uppercase tracking-widest text-on-surface-variant text-center">
-                            Longitude</th>
-                        <th
-                            class="px-8 py-5 text-[11px] font-bold uppercase tracking-widest text-on-surface-variant text-right">
-                            Ações</th>
+                            Município
+                        </th>
+                        <th class="px-8 py-5 text-[11px] font-bold uppercase tracking-widest text-on-surface-variant text-center">
+                            Latitude
+                        </th>
+                        <th class="px-8 py-5 text-[11px] font-bold uppercase tracking-widest text-on-surface-variant text-center">
+                            Longitude
+                        </th>
                     </tr>
                 </thead>
                 <tbody class="divide-y-0">
@@ -43,14 +42,6 @@
                         <td class="px-8 py-6 text-sm text-on-surface">{{ $work->municipality }}</td>
                         <td class="px-8 py-6 text-sm font-mono text-center">{{ $work->latitude }}</td>
                         <td class="px-8 py-6 text-sm font-mono text-center">{{ $work->longitude }}</td>
-                        <td class="px-8 py-6 text-right">
-                            <button class="text-primary hover:bg-primary/10 p-2 rounded-full transition-all">
-                                <span class="material-symbols-outlined">edit</span>
-                            </button>
-                            <button class="text-tertiary hover:bg-tertiary/10 p-2 rounded-full transition-all">
-                                <span class="material-symbols-outlined">delete</span>
-                            </button>
-                        </td>
                     </tr>
                     @empty
                         <tr>

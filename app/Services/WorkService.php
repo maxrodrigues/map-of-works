@@ -36,4 +36,13 @@ class WorkService
             ])
             ->values();
     }
+
+    public function getWorksMunicipality(): Collection
+    {
+        return $this->model
+            ->query()
+            ->selectRaw('municipality, COUNT(1) as count')
+            ->groupBy('municipality')
+            ->get();
+    }
 }

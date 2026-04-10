@@ -1,38 +1,15 @@
 <x-layouts.app>
     <x-header 
-        title="Monitoramento de Obras" 
-        description="Visão geral em tempo real de obras em andamento e integração urbana." 
+        title="Metrícas de Obras" 
+        description="Visão geral das metrícas de obras em andamento e integração urbana." 
     />
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 max-w-7xl">
-        <!-- Municipalities Covered -->
-        <div
-            class="bg-white p-6 rounded-xl border-l-4 border-secondary shadow-sm flex flex-col justify-between h-40">
-            <div class="flex justify-between items-start">
-                <span class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Municipalities
-                    Covered</span>
-                <span class="material-symbols-outlined text-secondary"
-                    style="font-variation-settings: 'FILL' 1;">location_on</span>
-            </div>
+
+    <div class="grid grid-cols-12 gap-6 mb-8">
+        <div class="col-span-4 bg-white shadow p-6 rounded-xl flex flex-col justify-center">
+            <span class="text-xs font-bold text-primary uppercase tracking-widest mb-1">Métricas Globais</span>
             <div class="flex items-baseline gap-2">
-                <span class="text-5xl font-black text-on-surface">42</span>
-                <span class="text-on-surface-variant text-sm">active zones</span>
-            </div>
-        </div>
-        <!-- Total Active Projects -->
-        <div
-            class="bg-white p-6 rounded-xl border-l-4 border-primary shadow-sm flex flex-col justify-between h-40">
-            <div class="flex justify-between items-start">
-                <span class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Total Active
-                    Projects</span>
-                <span class="material-symbols-outlined text-primary"
-                    style="font-variation-settings: 'FILL' 1;">construction</span>
-            </div>
-            <div class="flex items-end justify-between">
-                <span class="text-5xl font-black text-on-surface">128</span>
-                <div class="flex items-center text-secondary font-bold mb-1">
-                    <span class="material-symbols-outlined text-sm">trending_up</span>
-                    <span class="text-sm ml-1">+5% <span class="font-normal opacity-70">m/m</span></span>
-                </div>
+                <span class="text-3xl font-extrabold text-on-surface">{{ $count }}</span>
+                <span class="text-sm text-on-surface-variant">Projetos Ativos</span>
             </div>
         </div>
     </div>
